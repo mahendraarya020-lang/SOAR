@@ -48,10 +48,12 @@ graph TD
 Below are actual visual captures of the running SOAR dashboard interfaces demonstrating the ingestion panels, active server metrics, live threat feeds, and automatic isolation status:
 
 ### 1. Ingestion Control Panel & Endpoint Status Monitors
+
 This view presents the controls used to simulate cyber attacks, raw log input fields, and the active network map tracking isolated vs active servers:
 ![SOC Dashboard Ingest & Metrics](assets/click_feedback_1779191172402.png)
 
 ### 2. Real-Time Threat Alerts & Automated Isolation Log
+
 This view highlights critical intrusion detection, AI analysis output, and the exact timestamped quarantine logs of compromised machines:
 ![SOC Threat Feeds and Containment](assets/click_feedback_1779191206815.png)
 
@@ -59,7 +61,8 @@ This view highlights critical intrusion detection, AI analysis output, and the e
 
 ## 🛠️ Technology Stack & Dependencies
 
-### Backend Core:
+### Backend Core
+
 * **Runtime**: Node.js & TypeScript
 * **Server**: Express & Native HTTP Wrappers
 * **Queuing**: BullMQ & Redis Server
@@ -67,7 +70,8 @@ This view highlights critical intrusion detection, AI analysis output, and the e
 * **Realtime**: Socket.io Server
 * **AI engine**: Ollama API Client (Llama 3.2:latest)
 
-### Frontend Core:
+### Frontend Core
+
 * **Framework**: React 18 & TypeScript (Vite boilerplate)
 * **Realtime client**: Socket.io Client
 * **Styling**: Modern, responsive Dark Theme CSS with vibrant alert glassmorphism.
@@ -77,7 +81,9 @@ This view highlights critical intrusion detection, AI analysis output, and the e
 ## 🚀 Quick Start Guide
 
 ### 🚦 Prerequisites
+
 Ensure the following software components are running in the background:
+
 1. **Redis Server** (Port `6379`)
 2. **PostgreSQL Database** (Port `5432` with credentials defined in `.env`)
 3. **Ollama** with Llama 3.2 downloaded (`ollama run llama3.2`)
@@ -85,7 +91,9 @@ Ensure the following software components are running in the background:
 ---
 
 ### ⚙️ Step 1: Environment Setup
+
 Create a `.env` file in the root directory:
+
 ```env
 PORT=3000
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/api_soar
@@ -96,7 +104,9 @@ OLLAMA_URL=http://localhost:11434
 ---
 
 ### 📦 Step 2: Install Dependencies
+
 Run the install script from the project root:
+
 ```bash
 # Install backend dependencies
 npm install
@@ -110,7 +120,9 @@ cd ..
 ---
 
 ### 🗄️ Step 3: Initialize Database Schema
+
 Run the database migrations and seed script to setup standard monitoring assets:
+
 ```bash
 npm run db:init
 ```
@@ -118,15 +130,18 @@ npm run db:init
 ---
 
 ### 🚀 Step 4: Run Development Servers
+
 Open two terminal windows:
 
-#### Terminal 1 (Backend Core & Worker):
+#### Terminal 1 (Backend Core & Worker)
+
 ```bash
 npm run dev
 # Expected output: 🚀 SOAR Engine Core listening on http://localhost:3000
 ```
 
-#### Terminal 2 (Frontend React App):
+#### Terminal 2 (Frontend React App)
+
 ```bash
 cd soar-frontend
 npm run dev
@@ -134,14 +149,4 @@ npm run dev
 #                   ➜  Local:   http://localhost:5173/
 ```
 
-Open `http://localhost:5173/` in your browser and experience the future of autonomous, AI-driven cyber defense!
-
----
-
-## 🎓 Academic Publication & LaTeX Report
-The complete academic-grade project report (complete with Table of Contents, Figures List, and tables wrapped in `tabularx`) is written and fully compiled under:
-* 📁 Directory: `/API SOAR LATEX`
-* 🇮🇩 Indonesian version: `soar_project_report.pdf`
-* 🇬🇧 English version: `soar_project_report_en.pdf`
-
-Authored by **Mahendra Aryaputra Fitrianto** — *Telecommunication Engineering, Telkom University*.
+Open `http://localhost:5173/` in your browser and experience the future of autonomous, AI-driven cyber defense!.
